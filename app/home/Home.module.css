@@ -9,6 +9,78 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;;
-    background-image: url("../../public/galaxia.jpg");
+    background-attachment: fixed;
+    background-image: url("/1103754.jpg");
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: rgb(217, 217, 217);
+    text-shadow: 2px 0 rgb(108, 0, 108), -2px 0 rgb(108, 0, 108), 0 2px rgb(108, 0, 108), 0 -2px rgb(108, 0, 108),
+                1px 1px rgb(108, 0, 108), -1px -1px rgb(108, 0, 108), 1px -1px rgb(108, 0, 108), -1px 1px rgb(108, 0, 108);
+
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid purple;
+}
+
+.buttonSearch {
+    width: 122px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: lightgreen;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.buttonSearch:hover {
+    background-color: rgb(108, 0, 108);
+    color: lightgray;
+}
+
+.buttonReset {
+    width: 122px;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.buttonReset:hover {
+    background-color: rgb(108, 0, 108);
+    color: lightgray;
+}
+
+.loading {
+    text-align: center;
+}
+
+.notFound {
+    font-size: 2.5rem;
+    text-align: center;
+    color: tomato;
+    margin-top: 4rem;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
