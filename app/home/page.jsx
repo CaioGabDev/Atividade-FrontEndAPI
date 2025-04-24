@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CharacterCard from "../../components/CharacterCard";
-import Loader from "../../components/Loader";
+import Loading from "../../components/Loading";
   
 
 export default function Home() {
@@ -152,7 +152,7 @@ export default function Home() {
 
             {loading ? (
                 <div className={`${styles.loaderWrapper} ${loading ? "" : styles.hidden}`}>
-                  <Loader />
+                  <Loading />
                 </div>
             ) : (
                 <div className={styles.grid}>
