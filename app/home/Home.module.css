@@ -32,8 +32,8 @@
     border-radius: 10px;
     font-size: 1rem;
     background-color: #ffffff57;
-    color: white;
-    border: 1px solid #00c6ff55;
+    color: rgb(0, 0, 0);
+    border: 2px solid purple;
     backdrop-filter: blur(4px);
     outline: none;
     transition: all 0.3s ease;
@@ -44,8 +44,8 @@
 }
 
 .input:focus {
-    border-color: #00c6ff;
-    box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.3);
+    border-color: purple;
+    box-shadow: 0 0 0 3px rgba(230, 0, 255, 0.3);
 }
 
 .buttonSearch,
@@ -64,7 +64,8 @@
 }
 
 .buttonSearch {
-    background: linear-gradient(135deg, #28a745, #34d058);
+    background: linear-gradient(135deg, #a7289f, #34d058);
+    border: 2px solid purple;
 }
 
 .buttonSearch:hover {
@@ -73,7 +74,8 @@
 }
 
 .buttonReset {
-    background: linear-gradient(135deg, #dc3545, #ff5e6c);
+    background: linear-gradient(135deg, #a735dc, #ff5e6c);
+    border: 2px solid purple;
 }
 
 .buttonReset:hover {
@@ -82,7 +84,8 @@
 }
 
 .buttonNav {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    background: linear-gradient(135deg, #4c00ff, #ff00ff);
+    border: 2px solid purple;
 }
 
 .buttonNav:hover {
@@ -109,6 +112,7 @@
     padding: 8px 16px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border: 2px solid purple;
 }
 
 .loading {
