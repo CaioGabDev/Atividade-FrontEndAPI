@@ -1,9 +1,4 @@
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;  
-    gap:10px
-}
+ 
 
 .container {  
     background-size: cover;
@@ -11,16 +6,16 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: url("/1103754.jpg");
+    min-height: 100vh;
 }
+
 
 .title {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
-    color: rgb(217, 217, 217);
-    text-shadow: 2px 0 rgb(108, 0, 108), -2px 0 rgb(108, 0, 108), 0 2px rgb(108, 0, 108), 0 -2px rgb(108, 0, 108),
-                1px 1px rgb(108, 0, 108), -1px -1px rgb(108, 0, 108), 1px -1px rgb(108, 0, 108), -1px 1px rgb(108, 0, 108);
-
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .controls {
@@ -33,49 +28,102 @@
 
 .input {
     width: 300px;
-    padding: 10px;
+    padding: 12px 16px;
     border-radius: 10px;
-    border: 2px solid purple;
+    font-size: 1rem;
+    background-color: #ffffff57;
+    color: white;
+    border: 1px solid #00c6ff55;
+    backdrop-filter: blur(4px);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input::placeholder {
+    color: #dddddd;
+}
+
+.input:focus {
+    border-color: #00c6ff;
+    box-shadow: 0 0 0 3px rgba(0, 198, 255, 0.3);
+}
+
+.buttonSearch,
+.buttonReset,
+.buttonNav {
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: white;
 }
 
 .buttonSearch {
-    width: 122px;
-    height: 40px;
-    border-radius: 8px;
-    background-color: lightgreen;
-    color: white;
-    cursor: pointer;
-    transition: all 0.5s ease;
+    background: linear-gradient(135deg, #28a745, #34d058);
 }
 
 .buttonSearch:hover {
-    background-color: rgb(108, 0, 108);
-    color: lightgray;
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: scale(1.03);
 }
 
 .buttonReset {
-    width: 122px;
-    border-radius: 8px;
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    transition: all 0.5s ease;
+    background: linear-gradient(135deg, #dc3545, #ff5e6c);
 }
 
 .buttonReset:hover {
-    background-color: rgb(108, 0, 108);
-    color: lightgray;
+    background: linear-gradient(135deg, #c82333, #dc3545);
+    transform: scale(1.03);
+}
+
+.buttonNav {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.buttonNav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 114, 255, 0.3);
+}
+
+.buttonNav:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 114, 255, 0.2);
+}
+
+.buttonNav:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.pageIndicator {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 .loading {
     text-align: center;
+    color: #fff;
+    font-size: 1.25rem;
+    margin-top: 2rem;
 }
 
 .notFound {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     color: tomato;
     margin-top: 4rem;
+    text-shadow: 1px 1px 3px black;
 }
 
 .grid {
@@ -83,4 +131,57 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+}
+
+.navControls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}
+
+.loaderWrapper {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .loaderWrapper.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+@media (max-width: 600px) {
+    .input {
+        width: 100%;
+    }
+
+    .buttonSearch,
+    .buttonReset,
+    .buttonNav {
+        width: 100%;
+    }
+
+    .controls,
+    .navControls {
+        flex-direction: column;
+        align-items: center;
+    }
 }
